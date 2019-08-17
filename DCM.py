@@ -45,7 +45,7 @@ class DCM():
                 self.l = l
         
         print("search completed!")
-        print("Final l = {}".format(self.l))
+        print("Final l = {} best score is {}".format(self.l,best))
         
     def apply(self, pred):
         """
