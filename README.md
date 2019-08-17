@@ -16,7 +16,7 @@ Determinant based on Confusion Matrix
     
     D : normalized(for each row) Confusion Matrix
     
-    W : normalized weight of Training Set T
+    W : normalized weight of Valid Set V
     
     x : fixed input data
     
