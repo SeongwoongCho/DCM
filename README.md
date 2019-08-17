@@ -50,6 +50,6 @@ Determinant based on Confusion Matrix
     
                   = l(1-p_k) if k!=j
               
-    Search l which performs best score on validation set V in the N-element discrete space [1/N, 2/N, ..., 1] 
+    Search l which performs best score on validation set V in the (N+1)-element discrete space [0, 1/N, 2/N, ..., 1] 
     
 - Code Usage
