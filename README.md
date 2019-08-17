@@ -34,11 +34,11 @@ Determinant based on Confusion Matrix
     
         P(y = C_k | f(x) = [p_1, p_2, ..., p _N]) = sum_j { P(y = C_k, argmax[f(x)] =j | f(x) = [p_1, p_2, ..., p_N])}
     
-        = sum_j { P(f(x) = [p_1, p_2, ..., p_N] | y = C_k, argmax[f(x)] = j) * P(argmax[f(x)] = j | y = C_k) * P(y = C_i)
+        = sum_j { P(f(x) = [p_1, p_2, ..., p_N] | y = C_k, argmax[f(x)] = j) * P(argmax[f(x)] = j | y = C_k) * P(y = C_k)
     
-        = sum_j { P(f(x) = [p_1, p_2, ..., p_N] | y = C_k, argmax[f(x)] = j) * D(k,j) * W(i)}
+        = sum_j { P(f(x) = [p_1, p_2, ..., p_N] | y = C_k, argmax[f(x)] = j) * D(k,j) * W(k)}
         
-        = sum_j { S(k,j;l)*D(k,j)*W(i)}
+        = sum_j { S(k,j;l)*D(k,j)*W(k)}
     
     In the term P(f(x) = [p_1, p_2, ..., p_N] | y = C_k, argmax[f(x)] = j),
     
