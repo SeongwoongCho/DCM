@@ -54,4 +54,19 @@ Determinant based on Confusion Matrix
               
     Search l which performs best score on validation set V in the (N+1)-element discrete space [0, 1/N, 2/N, ..., 1] 
     
-- Code Usage
+- Usage
+      
+      from DCM import DCM
+      from sklearn.metrics import accuracy_score
+      
+      weight = [0.3, 0.3, 0.4]
+      pred = np.array([[0.1,0.2,0.7],[0.3,0.3,0.4],[0.8,0.1,0.1]])
+      true = np.array([2,1,0])
+      search_space = [0, 0.33, 0.67, 1]
+      
+      determinant = DCM(n_classes = 3, weight = weight, predict = pred, true = true, metric = accuracy_score)
+      determinant.search(space = search_space)
+      
+      Test_X = load_test_x() ## some function that load test data
+      pred_test =  model(Test_X) ## model is defined on somewhere above
+      pred_label = determinant.apply(pred_test)
