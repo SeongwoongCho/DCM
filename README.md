@@ -46,9 +46,9 @@ Determinant based on Confusion Matrix
     
     (and you can set any other function. please suggest better form)
     
-    S(k,j ;l) = p_k if k==j 
+        S(k,j ;l) = p_k if k==j 
     
-             = l(1-p_k) if k!=j
+                  = l(1-p_k) if k!=j
               
     Search best l in the N-element discrete space [1/N, 2/N, ..., 1] 
     
