@@ -32,11 +32,11 @@ Determinant based on Confusion Matrix
     
     Apply bayesian rule on above formula
     
-    P(y = C_k | f(x) = [p_1, p_2, ..., p _N]) = sum_j { P(y = C_k, argmax[f(x)] =j | f(x) = [p_1, p_2, ..., p_N])}
+        P(y = C_k | f(x) = [p_1, p_2, ..., p _N]) = sum_j { P(y = C_k, argmax[f(x)] =j | f(x) = [p_1, p_2, ..., p_N])}
     
-    = sum_j { P(f(x) = [p_1, p_2, ..., p_N] | y = C_k, argmax[f(x)] = j) * P(argmax[f(x)] = j | y = C_k) * P(y = C_i)
+        = sum_j { P(f(x) = [p_1, p_2, ..., p_N] | y = C_k, argmax[f(x)] = j) * P(argmax[f(x)] = j | y = C_k) * P(y = C_i)
     
-    = sum_j { P(f(x) = [p_1, p_2, ..., p_N] | y = C_k, argmax[f(x)] = j) * D(k,j) * W(i)}
+        = sum_j { P(f(x) = [p_1, p_2, ..., p_N] | y = C_k, argmax[f(x)] = j) * D(k,j) * W(i)}
     
     In the term P(f(x) = [p_1, p_2, ..., p_N] | y = C_k, argmax[f(x)] = j),
     
@@ -50,6 +50,6 @@ Determinant based on Confusion Matrix
     
                   = l(1-p_k) if k!=j
               
-    Search best l in the N-element discrete space [1/N, 2/N, ..., 1] 
+    Search l which performs best score on validation set V in the N-element discrete space [1/N, 2/N, ..., 1] 
     
 - Code Usage
