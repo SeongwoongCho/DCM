@@ -34,21 +34,22 @@ class DCMoptimizer():
         else:
             return l*(1-p[j])
     
-    def search(self,space):
-        best = -10000
+    def search(self,space,verbose = True):
+        self.best_score = -10000
         self.best_l = space[0]
         for l in space:
-            print("searching on l = {}".format(l))
+            if verbose:
+                print("searching on l = {}".format(l))
             self.l = l
             pred = self.apply(self.predict)
             score = self.metric(pred, self.true)
-            if score > best:
-                best = score
+            if score > self.best_score:
+                self.best_score = score
                 self.best_l = self.l
         self.l = self.best_l
         
         print("search completed!")
-        print("Final l = {} best score is {}".format(self.best_l,best))
+        print("Final l = {} best score is {}".format(self.best_l,self.best_score))
         
     def apply(self, pred):
         """
